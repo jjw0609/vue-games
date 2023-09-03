@@ -1,11 +1,8 @@
 <template>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="logo">
-        <img src="@/assets/logo.png" />
-      </div>
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">게임</a>
+        <a class="navbar-brand" href="#">게임사이트</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -25,7 +22,11 @@
             </li>
             <li class="nav-item">
               <!-- <a class="nav-link active" href="#">가위바위보</a> -->
-              <router-link class="nav-link active" aria-current="page" to="/">가위바위보</router-link>
+              <router-link class="nav-link active" aria-current="page" to="/rsp">가위바위보</router-link>
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link active" href="#">가위바위보</a> -->
+              <router-link class="nav-link active" aria-current="page" to="/board">게시판</router-link>
             </li>
             <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -43,8 +44,8 @@
             </li>
           </ul>
           <form class="d-flex">
-<!--            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />-->
-<!--            <button class="btn btn-outline-success" type="submit">Search</button>-->
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
       </div>
@@ -59,11 +60,5 @@ export default {
 
 
 <style scoped>
-  .logo {
-    margin-left: 5px;
-  }
-  .logo > img {
-    width: 27px;
-    height: 27px;
-  }
+
 </style>

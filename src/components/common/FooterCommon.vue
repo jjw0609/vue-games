@@ -1,6 +1,7 @@
 <template>
-  <footer class="text-center footer">
-    <p>&copy; 2023. jjw</p>
+  <footer class="text-center">
+    <hr />
+    <p>&copy; Company 2022-2023</p>
   </footer>
 </template>
 
@@ -8,12 +9,4 @@
 export default {}
 </script>
 
-<style scoped>
-  .footer {
-    position: absolute;
-    bottom: 0;
-    background-color: black;
-    color: white;
-    width: 100%;
-  }
-</style>
+<style scoped></style>
