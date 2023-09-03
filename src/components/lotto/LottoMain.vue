@@ -4,6 +4,9 @@
       <lotto-ball v-for="num in lottoSet" :key="num" :lottoNum="num"></lotto-ball>
     </div>
   </div>
+  <div class="refresh">
+    <button @click="init">새로고침</button>
+  </div>
 </template>
 
 <script>
@@ -14,12 +17,28 @@ export default {
   components:{
     LottoBall
   },
+  methods: {
+    init() {
+      this.lottoSet = new Set();
+      console.log(typeof this.lottoSet)
+      while (this.lottoSet.size != 6) {
+        const lottoNum = Math.floor(Math.random() * 45 + 1)
+        this.lottoSet.add(lottoNum);
+        const sorted = Array.from(this.lottoSet).sort((a, b) => a-b);
+        this.lottoSet = new Set(sorted);
+      }
+      for (let temp of this.lottoSet) {
+        console.log(temp)
+      }
+    },
+  },
   data() {
     return {
       lottoSet : new Set()
     }
   },
   created(){
+    this.init();
     console.log(typeof this.lottoSet)
     while (this.lottoSet.size != 6) {
       const lottoNum = Math.ceil(Math.random() * 45 + 1)
@@ -50,5 +69,8 @@ li {
 }
 a {
   color: #42b983;
+}
+.refresh {
+  text-align: center;
 }
 </style>
