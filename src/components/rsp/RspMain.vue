@@ -30,7 +30,6 @@
             <img :src="computer.img" class="card-img-top" alt="..." />
             <div class="card-body text-center">
               <h5 class="card-title">컴퓨터</h5>
-              <button id="rsp-btn-computer" class="btn btn-primary m-2">가위</button>
             </div>
           </div>
         </div>
