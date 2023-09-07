@@ -1,7 +1,7 @@
 import http from './HttpCommon'
 
 class BoardDataService{
-  //http://3.37.128.156:9999/hjs/rboard/list
+
   getAll(){
     return http.get('/rboard/list')
   }
